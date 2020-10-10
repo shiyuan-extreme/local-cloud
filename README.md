@@ -81,8 +81,8 @@ rancher app install --namespace local-volume local-static-provisioner local-stat
 ```she
 curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/install_xiq.sh | \
 	CLUSTER_NAME=xca-sychen \
-	GDC_SERVER=extremecloudiq.com \
-	GDC_SHARD=us \
+	GDC_SERVER=us.extremecloudiq.com \
+	LOGIN_URL=https://extremecloudiq.com \
 	XIQ_VERSION=20.9.30.14 \
 	RDC_CUSTOMER_DOMAIN=qa.xcloudiq.com sh 
 ```
