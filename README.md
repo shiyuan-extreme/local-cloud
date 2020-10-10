@@ -4,7 +4,7 @@
 
 ```she
 # run following command on all boxes
-curl https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/create-local-valumes.sh | sh 
+curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/create-local-valumes.sh | sh 
 ```
 
 # Rancher Integration Task Items
@@ -79,7 +79,12 @@ rancher app install --namespace local-volume local-static-provisioner local-stat
 #### Run Cli Command to install XIQ Service
 
 ```she
-
+curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/install_xiq.sh | \
+	CLUSTER_NAME=xca-sychen \
+	GDC_SERVER=extremecloudiq.com \
+	GDC_SHARD=us \
+	XIQ_VERSION=20.9.30.14 \
+	RDC_CUSTOMER_DOMAIN=qa.xcloudiq.com sh 
 ```
 
 ### Option 2 - Use Pipeline
