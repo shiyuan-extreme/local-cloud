@@ -38,7 +38,7 @@ rancher app install \
   xiq-settings xiq-settings
 
 is_xiq_settings_ready(){
-		sleep 10
+		sleep 30
 }
 is_xiq_settings_ready
 
