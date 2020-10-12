@@ -25,7 +25,7 @@ rancher_install(){
 rancher kubectl -n ${NAMESPACE} apply -f https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/miscs/gcr-pull-secret.yaml
 
 # create pvc for file server 
-rancher kubectl -n $NAMESPACE -f https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/miscs/efs-fileserver-pvc.yaml
+rancher kubectl -n ${NAMESPACE} apply -f https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/miscs/efs-fileserver-pvc.yaml
 
 # install settings
 rancher app install \
