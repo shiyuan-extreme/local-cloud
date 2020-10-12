@@ -4,7 +4,7 @@
 
 ```she
 # run following command on all boxes
-curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/create-local-valumes.sh | sh 
+curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/utils/create-local-volumes.sh | sh 
 ```
 
 # Rancher Integration Task Items
