@@ -2,7 +2,7 @@ CLUSTER_NAME=${CLUSTER_NAME:="xca-sychen"}
 GDC_SERVER=${GDC_SERVER:="us.extremecloudiq.com"}
 LOGIN_URL=${GDC_SHARD:="https://extremecloudiq.com"}
 XIQ_VERSION=${XIQ_VERSION:="20.9.30.14"}
-RDC_CUSTOMER_DOMAIN={RDC_CUSTOMER_DOMAIN:="qa.xcloudiq.com"}
+RDC_CUSTOMER_DOMAIN=${RDC_CUSTOMER_DOMAIN:="qa.xcloudiq.com"}
 
 NAMESPACE=xiq
 DEFAULT_CHART_VERSION=3.1.0
