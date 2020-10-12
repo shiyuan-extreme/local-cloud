@@ -58,6 +58,13 @@ is_middleware_ready(){
 }
 is_middleware_ready
 
+# initialzing schema
+rancher_install	hm-schema
+is_schema_ready(){
+		sleep 120
+}
+is_schema_ready
+
 # install applications
 rancher_install nginx-frontend  
 rancher_install nginx-backend "" 3.3.0 
