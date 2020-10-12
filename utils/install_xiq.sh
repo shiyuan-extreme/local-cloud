@@ -37,6 +37,11 @@ rancher app install \
     --set rdcName=${CLUSTER_NAME} \
   xiq-settings xiq-settings
 
+is_xiq_settings_ready(){
+		sleep 10
+}
+is_xiq_settings_ready
+
 # install mx replay
 rancher_install mx-relay "" 1.1.1
 
