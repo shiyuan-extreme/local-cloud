@@ -1,6 +1,6 @@
 # Local Cloud Task Items
 
-## Prepare Local Volumes
+## Setup Local Volumes
 
 ```she
 # run following command on all boxes
@@ -12,13 +12,6 @@ curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/mast
 ## Import Local Cloud to Rancher
 
 [Importing Existing Clusters into Rancher](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/imported-clusters/)
-
-## Configure XIQ Catalog
-
-```she
-catalog name: xiqcommon
-catalog URL : https://charts.xcloudiq.com/common	
-```
 
 ## Setup Rancher Command-line Tools
 
@@ -32,6 +25,12 @@ TODO
 
 ```shell
 rancher login https://<SERVER_URL> --token <BEARER_TOKEN>
+```
+
+## Configure XIQ Catalog
+
+```she
+rancher  catalog  add --helm-version v3 xiqpub https://charts.xcloudiq.com/public/ 
 ```
 
 ## Create Project
@@ -60,18 +59,6 @@ Select a Project: (enter the number of project oss3.0 )
 rancher namespaces create xiq
 ```
 
-## Installing Helm Operator
-
-```she
-rancher app install --namespace flux helm-operator helm-operator 
-```
-
-## Installing Local Volume Static Provisioner
-
-```she
-rancher app install --namespace local-volume local-static-provisioner local-static-provisioner
-```
-
 ## Installing XIQ Service
 
 ### Option 1: Use Rancher Cli
@@ -96,8 +83,7 @@ curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/mast
 # Upgrade Service
 
 ```shell
-rancher catalog refresh xiqcommon 
-
+#TODO
 ```
 
 
