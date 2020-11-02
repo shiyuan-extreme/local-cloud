@@ -5,6 +5,7 @@ destroy_pvs(){
     test -d ${PV_BASE} || return
     for dir in `ls -A ${PV_BASE}`; do 
         umount ${PV_BASE}/${dir}
+        sleep 3
         /bin/rm -rf ${PV_BASE}
     done
 }
