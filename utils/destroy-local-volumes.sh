@@ -7,6 +7,7 @@ destroy_pvs(){
         umount ${PV_BASE}/${dir}
         sleep 3
         /bin/rm -rf ${PV_BASE}
+        echo "removed ${PV_BASE}/${dir}"
     done
 }
 
