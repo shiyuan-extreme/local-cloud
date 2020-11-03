@@ -64,11 +64,11 @@ rancher namespaces create xiq
 ### Installing osscli
 
 ```she
-cluster_name=
+cluster_name=xca-sychen
 rancher kubectl -n xiq apply -f https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/miscs/gcr-pull-secret.yaml
 rancher app install \
-	--set kubeConfig=$(rancher cluster kf $cluster | base64 | tr -d "\n") \
-	--set oss.cluster=$cluster  \
+	--set kubeConfig=$(rancher cluster kf $cluster_name | base64 | tr -d "\n") \
+	--set oss.cluster=$cluster_name  \
 	--namespace=xiq \
 	cattle-global-data:xiqpub-osscli  \
 	osscli

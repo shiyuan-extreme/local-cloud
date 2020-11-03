@@ -5,6 +5,7 @@ create_bind_mount(){
     test -d $PV_BASE || mkdir -p $PV_BASE
     PV=$(mktemp -d -p $PV_BASE data.XXXXXX)
     mount --bind $PV $PV
+    echo "created local volume $PV."
 }
 
 create_bind_mount hm-elastic
