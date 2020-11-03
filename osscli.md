@@ -79,7 +79,7 @@ rancher app install \
 ```she
 rancher kubectl -n xiq exec -it osscli-0 -- osscli repo sy
 rancher kubectl -n xiq exec -it osscli-0 -- osscli app install local-static-provisioner
-rancher kubectl -n xiq exec -it osscli-0 -- osscli app -l kind=middleware install
+rancher kubectl -n xiq exec -it osscli-0 -- osscli app -l layer=middleware install
 rancher kubectl -n xiq exec -it osscli-0 -- osscli app install idmgateway
 rancher kubectl -n xiq exec -it osscli-0 -- osscli app install hm-schema
 rancher kubectl -n xiq exec -it osscli-0 -- osscli app -l layer=webapp install
