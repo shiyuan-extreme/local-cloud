@@ -27,30 +27,20 @@ TODO
 rancher login https://<SERVER_URL> --token <BEARER_TOKEN>
 ```
 
-## Configure XIQ Catalog
-
-```she
-rancher  catalog  add --helm-version v3 xiqpub https://charts.xcloudiq.com/public/ 
-```
-
 ## Create Project
 
 ### Create project oss3.0
 
 ```shel
-rancher  project create oss3.0
+rancher  project create --cluster $cluster oss3.0
 ```
 
 ### Switch Rancher Context to Project oss3.0
 
 ```shel
-rancher context switch
-NUMBER    CLUSTER NAME   PROJECT ID              PROJECT NAME   
-1         rketest        c-46dhf:p-5sjpd   System         System project created for the cluster
-2         rketest        c-46dhf:p-vbcpz   Default        Default project created for the cluster
-3         xca-sj         c-g5h86:p-ddrls   myproject      
-4         xca-sj         c-g5h86:p-fthtn   oss3.0     
-Select a Project: (enter the number of project oss3.0 )
+rancher context switch oss3.0
+# view current context 
+rancher context current 
 ```
 
 ### Create namespace 
@@ -64,14 +54,9 @@ rancher namespaces create xiq
 ### Installing osscli
 
 ```she
-cluster_name=xca-sychen
+cluster=xca-sychen
 rancher kubectl -n xiq apply -f https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/master/miscs/gcr-pull-secret.yaml
-rancher app install \
-	--set kubeConfig=$(rancher cluster kf $cluster_name | base64 | tr -d "\n") \
-	--set oss.cluster=$cluster_name  \
-	--namespace=xiq \
-	cattle-global-data:xiqpub-osscli  \
-	osscli
+
 ```
 
 ### Install XIQ Service
