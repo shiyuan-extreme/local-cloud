@@ -40,6 +40,7 @@ kubectl exec -it ${cluster}-osscli-0 -- bash
 # run below commands 
 osscli init
 osscli repo sy
+osscli app install xca-miscs 
 osscli app install local-static-provisioner
 osscli app -l layer=middleware install
 osscli app install idmgateway
