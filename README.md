@@ -11,7 +11,7 @@ curl --silent https://raw.githubusercontent.com/shiyuan-extreme/local-cloud/mast
 
 ## Import Local Cloud to Rancher
 
-1. Importing Existing Clusters into Rancher](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/imported-clusters/)
+1. [Importing Existing Clusters into Rancher](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/imported-clusters/)
 
 2. [Create an API Key](https://rancher.com/docs/rancher/v2.x/en/user-settings/api-keys/) Please save the token, we'll use it when install osscli in the next step. 
 
@@ -40,6 +40,7 @@ kubectl exec -it ${cluster}-osscli-0 -- bash
 # run below commands 
 osscli init
 osscli repo sy
+osscli app install xca-miscs 
 osscli app install local-static-provisioner
 osscli app -l layer=middleware install
 osscli app install idmgateway
