@@ -13,4 +13,4 @@ create_bind_mount ple-elastic
 create_bind_mount postgresql
 create_bind_mount default-redis-cluster
 create_bind_mount default-redis-cluster
- 
+create_bind_mount prometheus
