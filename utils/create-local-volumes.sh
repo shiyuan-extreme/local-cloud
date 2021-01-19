@@ -5,6 +5,7 @@ create_bind_mount(){
     test -d $PV_BASE || mkdir -p $PV_BASE
     PV=$(mktemp -d -p $PV_BASE data.XXXXXX)
     mount --bind $PV $PV
+    echo "$PV $PV none bind 0 0 | sudo tee -a /etc/fstab"
     echo "created local volume $PV."
 }
 
