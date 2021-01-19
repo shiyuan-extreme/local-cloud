@@ -16,4 +16,6 @@ destroy_pvs hm-elastic
 destroy_pvs ple-elastic
 destroy_pvs postgresql
 destroy_pvs default-redis-cluster
- 
+
+# cleanup fstab
+sed -i '/bind/d' /etc/fstab
